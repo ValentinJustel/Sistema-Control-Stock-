@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
+
 # Lista de productos, stock y precios
 productos = [
     {"nombre": "Pollo", "descripcion": "Pollo fresco por kg", "precio": 2240, "stock": 0},
@@ -88,6 +89,16 @@ producto_var = StringVar()
 cantidad_var = StringVar()
 accion_var = StringVar()
 
+# panel superior
+panel_superior = Frame(aplicacion, bd=1, relief=FLAT)
+panel_superior.pack(side=TOP)
+
+# etiqueta titulo
+etiqueta_titulo = Label(panel_superior, text='Sistema de control de stock', fg='Black',
+                        font=('Dosis', 58), bg='Lightcyan2', width=22)
+etiqueta_titulo.grid(row=0, column=0)
+
+
 # panel derecha
 panel_derecha = Frame(aplicacion, relief=FLAT, bg='#778899')
 panel_derecha.pack(side=RIGHT, padx=80, expand=True)
@@ -96,25 +107,27 @@ panel_derecha.pack(side=RIGHT, padx=80, expand=True)
 panel_modificar_stock = Frame(panel_derecha, bd=1, relief=FLAT, bg='#778899')
 panel_modificar_stock.pack(expand=True, pady=100)
 
-Label(panel_modificar_stock, text="Producto", font=("Dosis", 14), bg='#778899').grid(row=0, column=0, padx=5, pady=5,)
+Label(panel_modificar_stock, text="Producto", font=("Dosis", 14), bg='Lightcyan2').grid(row=0, column=0, padx=5, pady=5,)
 producto_var.set(productos[0]["nombre"])
 productos_dropdown = OptionMenu(panel_modificar_stock, producto_var, *[p["nombre"] for p in productos])
 productos_dropdown.grid(row=0, column=1, padx=5, pady=5)
 
-Label(panel_modificar_stock, text="Cantidad", font=("Dosis", 14), bg='#778899').grid(row=1, column=0, padx=5, pady=5,)
+Label(panel_modificar_stock, text="Cantidad", font=("Dosis", 14), bg='Lightcyan2').grid(row=1, column=0, padx=5, pady=5,)
 Entry(panel_modificar_stock, textvariable=cantidad_var, font=("Dosis", 14), width=10).grid(row=1, column=1, padx=5, pady=5)
 
-Label(panel_modificar_stock, text="Acción", font=("Dosis", 14), bg='#778899').grid(row=2, column=0, padx=5, pady=5,)
+Label(panel_modificar_stock, text="Acción", font=("Dosis", 14), bg='Lightcyan2').grid(row=2, column=0, padx=5, pady=5,)
 accion_var.set("Agregar stock")
 accion_dropdown = OptionMenu(panel_modificar_stock, accion_var, "Agregar stock", "Quitar stock")
 accion_dropdown.grid(row=2, column=1, padx=5, pady=5)
 
-Button(panel_modificar_stock, text="Enviar", font=("Dosis", 14), command=actualizar_stock).grid(row=3, column=0, columnspan=2, pady=10)
+Button(panel_modificar_stock, text="Enviar", font=("Dosis", 14),  command=actualizar_stock).grid(row=3, column=0, columnspan=2, pady=10)
 Button(panel_modificar_stock, text="Resetear", font=("Dosis", 14), command=resetear).grid(row=4, column=0, columnspan=2, pady=10)
 
 # Panel de stock
 panel_stock = Frame(aplicacion, relief=FLAT, bg='#778899')
 panel_stock.pack(side=LEFT, padx=20)
+
+
 
 # Tabla de productos (Stock)
 tabla_stock = ttk.Treeview(panel_stock, columns=("Producto", "Descripcion", "Precio", "Stock"), show="headings", height=20)
