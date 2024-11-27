@@ -1,3 +1,9 @@
 El proposito de la aplicacion creada es realizar el control de stock de un supermercado, agregando o quitando stock, segun la funcion que se elija.
 
-Lo que se debe hacer para descargar 
+Lo que se debe hacer para descargar el codigo de la aplicacion es ir arriba a la derecha en los tres puntos, donde dice descargar y va a comenzar la descarga, para instalar y ejecutar la aplicacion se recomienda Visual Studio code, donde vamos a copiar el codigo del archivo anteriormente cargado y lo vamos a pegar en el visual studio.
+
+Funcionalidades basicas del programa: Una lista donde se encuentran todos los productos y todas sus descripciones, precios y el stock principiante,
+Botones donde vamos a poder elegir entre los distintos tipos de productos que se encuentran cargados, un boton que permite seleccionar entre las dos funciones de sacar o agregar stock, segun lo que el usuario desee.
+Un entry donde vamos a ingresar una cantidad numerica que va a ser el numero de stock que se agregue/quite.
+Un boton de enviar donde confirma la accion elegida anteriormente y un boton de resetear donde va a borrar el numero cargado anteriormente en el entry.
+
