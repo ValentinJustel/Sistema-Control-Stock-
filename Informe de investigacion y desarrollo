@@ -1,6 +1,0 @@
-tkinter es una biblioteca de python que se usa para crear aplicaciones con interfaz grafica de usuario. 
-Elegimos el sistema de control de stock debido a que es el que mas se adaptaba a nuestro modelo planteado.
-
-Modificaciones:
-Modificamos el codigo de sistema de facturacion y lo adaptamos a un sistema de control de stock, donde creamos un panel nuevo con todos los productos, precios , cantidad y descripcion, luego modificamos el panel del recibo por completo, agregando funciones que se adapten al control de stock, como la de elegir el producto, y modificar su cantidad de stock, ingresando una cantidad numerica y seleccionando la opcion de agregar stock, por el contrario tambien agregamos la opcion de quitar stock, con el mismo funcionamiento nombrado recientemente.
-nos encontramos con algunas dificultades, como la de crear los nuevos paneles de los productos y poder acomodarlos en la pantalla.
