@@ -1,6 +1,6 @@
 👤 Bienvenidos al sistema de control de stock, de nuestra empresa simulada Supermercado 🏨
 
-      🖥️ Pasos a seguir para una instalacion segura, exitosa y funcional. 🙂
+🖥️ Pasos a seguir para una instalacion segura, exitosa y funcional. 🙂
 
 1. Lo primero que debemos hacer es irnos a la carpeta donde dice Archivo con aplicacion, 📱
    
